@@ -23,11 +23,6 @@ This project demonstrates the implementation of advanced caching techniques to i
 - **JDBC**: Facilitates communication with MySQL for database interactions.
 - **ExecutorService**: Enables concurrency by simulating multi-threaded access to the cache and database.
 
-## Project Structure
-
-├── src │ ├── main │ │ ├── java │ │ │ ├── com │ │ │ │ └── example │ │ │ │ └── AdvancedDatabaseCachingBenchmarkThread.java │ ├── resources │ │ ├── application.properties (optional, for configuration) └── pom.xml (Maven project file)
-
-
 ## Requirements
 
 - **Java**: Version 8 or above
@@ -42,3 +37,25 @@ Clone the repository to your local machine using the following command:
 
 ```bash
 git clone https://github.com/Udaya-raman/Advanced-caching-project.git
+
+## 2. Database Setup:
+Create a MySQL database named testdb.
+Run the following SQL query to create the test_table:
+CREATE TABLE IF NOT EXISTS test_table (
+    id INT PRIMARY KEY,
+    value VARCHAR(255)
+);
+
+## 3. Maven Setup:
+Open the project in your favorite IDE (e.g., IntelliJ IDEA, VS Code).
+Install the project dependencies by running the following command:
+mvn install
+
+## 4. Run the Project:
+You can directly run the AdvancedDatabaseCachingBenchmarkThread.java class to execute the benchmarking tests. This will initiate the caching operations and the database interactions.
+
+## 5. View Benchmark Results:
+After running the project, the console will display the time taken for various operations:
+Database insert operations.
+Cache insert operations (L1, L2, and L3).
+Retrieval times from the L1, L2, and multi-level caches.
