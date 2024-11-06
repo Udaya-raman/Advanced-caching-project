@@ -3,15 +3,12 @@ This project demonstrates the implementation of advanced caching techniques to i
 
 Features
 Multi-level Caching:
-
 L1 Cache: Local in-memory cache implemented using a LinkedHashMap for fast access to frequently queried data.
 L2 Cache: Guava Cache with automatic expiration to efficiently store data in memory with a configurable TTL (Time to Live).
 L3 Cache: A MySQL database serves as the fallback storage, allowing persistent storage of data when the cache layers are bypassed.
 Concurrency Support:
-
 Uses Java’s ExecutorService to simulate concurrent operations, handling multiple threads performing data operations in parallel for performance testing.
 Benchmarking:
-
 Measures the time taken for inserting and retrieving data from the database and cache layers (L1, L2, L3), providing insights into the effectiveness of caching in performance optimization.
 Technologies Used
 Java 8+: For multithreading and concurrent operations using ExecutorService.
@@ -61,7 +58,7 @@ mvn install
 4. Run the Project:
 You can directly run the AdvancedDatabaseCachingBenchmarkThread.java class to execute the benchmarking tests. This will initiate the caching operations and the database interactions.
 5. View Benchmark Results:
-After running the project, the console will display the time taken for various operations, such as:
+After running the project, the console will display the time taken for various operations:
 Database insert operations.
 Cache insert operations (L1, L2, and L3).
 Retrieval times from the L1, L2, and multi-level caches.
